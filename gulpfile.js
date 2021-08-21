@@ -1,6 +1,5 @@
 const { src, dest, series, watch } = require('gulp');
 
-const ghPages = require('gulp-gh-pages');
 const uglify = require('gulp-uglify-es').default;
 const sass = require('gulp-sass')(require('sass'));
 const csso = require('gulp-csso');
@@ -11,7 +10,6 @@ const changed = require('gulp-changed');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const ttf2woff = require('gulp-ttf2woff');
 const del = require('del');
-// const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const sync = require('browser-sync').create();
 
@@ -123,10 +121,6 @@ function serve() {
   watch('src/scss/**/**.scss', series(scss)).on('change', sync.reload)
 }
 
-gulp.task('deploy', function () {
-  return gulp.src('./dist/**/*')
-    .pipe(ghPages());
-});
 
 
 

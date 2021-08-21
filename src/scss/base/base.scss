@@ -1,0 +1,127 @@
+@import 'null';
+@import 'fonts';
+
+
+body {
+  font-family: $baseFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  background-color: #fff;
+}
+
+.lock {
+  overflow: hidden;
+}
+
+.wrapper {
+  position: relative;
+  min-width: $minWidth + px;
+  margin: 0 auto;
+  overflow: hidden;
+  min-height: 100%;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+}
+.container {
+  max-width: 1270px;
+  padding-left: var(--container-side-padding);
+  padding-right: var(--container-side-padding);
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 700;
+  
+}
+h2 {
+  font-weight: 700;
+  @include adaptiv-value( font-size, 40, 18, 1);  
+  // display: flex;
+  // align-items: center;
+
+  &::before {
+    content: '';
+    // flex-shrink: 0;
+    display: inline-block;
+    width: 0.65em;
+    height: 0.8em;
+    // margin-right: 10px;
+    background: linear-gradient(to bottom, #267E2F 20%, transparent 20%, transparent 40%, #267E2F 40%, #267E2F 60%, transparent 60%, transparent 80%, #267E2F 80%);
+  }
+}
+h3 {
+  font-weight: 700;
+}
+
+picture {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  font-size: inherit;
+  background-color: transparent;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+}
+
+.swiper-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #267E2F;
+    border: 1px solid #267E2F;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    @include adaptiv-value( font-size, 20, 12, 1);
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1em 1.25em;
+    transition: transform 0.2s ease-out 0s,
+                box-shadow 0.2s ease-out 0s;
+
+
+    &::first-letter {
+      font-size: var(--first-letter);
+    }
+
+    &:hover {
+      box-shadow: 4px 4px 6px rgba(0, 0, 0, 0);
+      transform: translate(4px, 4px);
+    }
+}
+
+.section-descr {
+  font-weight: 500;
+  max-width: 27em;
+  text-transform: uppercase;
+  @include adaptiv-value( font-size, 15, 12, 1);
+  &::first-letter {
+    font-size: var(--first-letter);
+  }
+  margin-top: 10px;
+}
+

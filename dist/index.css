@@ -1,0 +1,320 @@
+@charset "UTF-8";
+
+:root {
+  --container-side-padding: 50px;
+  --first-letter: 1.3em;
+  --dashoffset: 0;
+}
+
+/*Обнуление*/
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+input[type=text]::-webkit-input-placeholder {
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+input[type=text]::-moz-placeholder {
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+input[type=text]:-ms-input-placeholder {
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+input[type=text]::-ms-input-placeholder {
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+input[type=text]::placeholder {
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button,
+label {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  font-display: swap;
+  src: url("fonts/ProximaNova-Black.woff2") format("woff2"), url("fonts/ProximaNova-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  font-display: swap;
+  src: url("fonts/ProximaNova-Bold.woff2") format("woff2"), url("fonts/ProximaNova-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  font-display: swap;
+  src: url("fonts/ProximaNova-Regular.woff2") format("woff2"), url("fonts/ProximaNova-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "ProximaNova", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  background-color: #fff;
+}
+
+.lock {
+  overflow: hidden;
+}
+
+.wrapper {
+  position: relative;
+  min-width: 360px;
+  margin: 0 auto;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.container {
+  max-width: 1270px;
+  padding-left: var(--container-side-padding);
+  padding-right: var(--container-side-padding);
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+h2::before {
+  content: "";
+  display: inline-block;
+  width: 0.65em;
+  height: 0.8em;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #267E2F), color-stop(20%, transparent), color-stop(40%, transparent), color-stop(40%, #267E2F), color-stop(60%, #267E2F), color-stop(60%, transparent), color-stop(80%, transparent), color-stop(80%, #267E2F));
+  background: -o-linear-gradient(top, #267E2F 20%, transparent 20%, transparent 40%, #267E2F 40%, #267E2F 60%, transparent 60%, transparent 80%, #267E2F 80%);
+  background: linear-gradient(to bottom, #267E2F 20%, transparent 20%, transparent 40%, #267E2F 40%, #267E2F 60%, transparent 60%, transparent 80%, #267E2F 80%);
+}
+
+h3 {
+  font-weight: 700;
+}
+
+picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+button {
+  font-size: inherit;
+  background-color: transparent;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+}
+
+.swiper-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.swiper-slide {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #267E2F;
+  border: 1px solid #267E2F;
+  -webkit-box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+          box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 1em 1.25em;
+  -webkit-transition: -webkit-transform 0.2s ease-out 0s, -webkit-box-shadow 0.2s ease-out 0s;
+  transition: -webkit-transform 0.2s ease-out 0s, -webkit-box-shadow 0.2s ease-out 0s;
+  -o-transition: transform 0.2s ease-out 0s, box-shadow 0.2s ease-out 0s;
+  transition: transform 0.2s ease-out 0s, box-shadow 0.2s ease-out 0s;
+  transition: transform 0.2s ease-out 0s, box-shadow 0.2s ease-out 0s, -webkit-transform 0.2s ease-out 0s, -webkit-box-shadow 0.2s ease-out 0s;
+}
+
+.btn::first-letter {
+  font-size: var(--first-letter);
+}
+
+.btn:hover {
+  -webkit-box-shadow: 4px 4px 6px rgba(0, 0, 0, 0);
+          box-shadow: 4px 4px 6px rgba(0, 0, 0, 0);
+  -webkit-transform: translate(4px, 4px);
+      -ms-transform: translate(4px, 4px);
+          transform: translate(4px, 4px);
+}
+
+.section-descr {
+  font-weight: 500;
+  max-width: 27em;
+  text-transform: uppercase;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.section-descr::first-letter {
+  font-size: var(--first-letter);
+}
+
+@media (max-width: 1920px) {
+  h2 {
+    font-size: calc(18px + 22 * ((100vw - 360px) / (1920 - 360)));
+  }
+
+  .btn {
+    font-size: calc(12px + 8 * ((100vw - 360px) / (1920 - 360)));
+  }
+
+  .section-descr {
+    font-size: calc(12px + 3 * ((100vw - 360px) / (1920 - 360)));
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+    --container-side-padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-side-padding: 20px;
+  }
+
+  :root {
+    --container-side-padding: 15px;
+  }
+}
+
+@media (max-width: 375px) {
+  :root {
+    --container-side-padding: 10px;
+  }
+}

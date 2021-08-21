@@ -1,0 +1,44 @@
+:root {
+  --container-side-padding: 50px;
+  --first-letter: 1.3em;
+
+  --dashoffset: 0;
+
+  @media (max-width: 992px) {
+    --container-side-padding: 30px;
+  }
+  @media (max-width: 768px) {
+    --container-side-padding: 20px;
+  }
+  @media (max-width: 768px) {
+    --container-side-padding: 15px;
+  }
+  @media (max-width: 375px) {
+    --container-side-padding: 10px;
+  }
+}
+
+
+
+// vars------------------
+$maxWidth: 1920;
+$minWidth: 360;
+$maxWidthContainer: $maxWidth;
+
+$baseFont: 'ProximaNova';
+// vars------------------
+
+
+// colors
+
+
+
+// colors
+
+
+// path
+
+
+
+
+// path
